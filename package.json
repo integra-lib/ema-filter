@@ -1,5 +1,5 @@
 {
-  "name": "integra-ema-filter",
+  "name": "hwlib-ema-filter",
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

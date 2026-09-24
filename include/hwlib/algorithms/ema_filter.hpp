@@ -1,6 +1,6 @@
 #pragma once
 
-namespace integra
+namespace hwlib::algorithms
 {
 
 /// Exponential moving average filter: output = alpha * input + (1 - alpha) * prev_output.
@@ -44,4 +44,4 @@ private:
     bool m_initialized{false};
 };
 
-} // namespace integra
+} // namespace hwlib::algorithms

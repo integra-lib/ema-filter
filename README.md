@@ -2,23 +2,23 @@
 
 Exponential moving average; the first sample is taken without lag.
 
-Part of [integra-lib](https://github.com/integra-lib) — architecture-independent C++20
+Part of [hwlib](https://github.com/integra-lib) — architecture-independent C++20
 components shared between firmware projects. Header-only,
 no exceptions, no RTTI.
 
 ## Use it
 
 ```bash
-git submodule add git@github.com:integra-lib/ema-filter.git external/integra/ema-filter
+git submodule add git@github.com:integra-lib/ema-filter.git external/hwlib/ema-filter
 ```
 
 ```cmake
-add_subdirectory(external/integra/ema-filter)
-target_link_libraries(app PRIVATE Integra::ema_filter)
+add_subdirectory(external/hwlib/ema-filter)
+target_link_libraries(app PRIVATE Hwlib::ema_filter)
 ```
 
 ```cpp
-#include <integra/ema_filter.hpp>
+#include <hwlib/algorithms/ema_filter.hpp>
 ```
 
 Each component carries its own include directory, so this header stays unreachable
@@ -31,9 +31,9 @@ Every component is released on its own, tagged `vX.Y.Z`. Pre-1.0, a minor releas
 break the API, which is why dependants accept a single minor.
 
 ```bash
-git -C external/integra/ema-filter fetch --tags
-git -C external/integra/ema-filter checkout v0.2.0
-git add external/integra/ema-filter && git commit -m "build: bump ema-filter to v0.2.0"
+git -C external/hwlib/ema-filter fetch --tags
+git -C external/hwlib/ema-filter checkout v0.2.0
+git add external/hwlib/ema-filter && git commit -m "build: bump ema-filter to v0.2.0"
 ```
 
 ## In a consumer's CI
